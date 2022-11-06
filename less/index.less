@@ -1,0 +1,114 @@
+// out: ../css/index.css
+html, body {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, ul, li, a, p, div {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+}
+@primary: #2980b9;
+body {
+    padding: 50px;
+}
+.borderRadius(@radius) {
+    border-radius: @radius;
+}
+.primaryFont(@weight: normal) {
+    font-family: "Tahoma";
+    font-weight: @weight;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    img {
+        width: 14px;
+        height: 14px; 
+    }
+    &.active {
+        .drop-btn {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+        .drop-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .drop-btn {
+        display: inline-block;
+        background-color: @primary;
+        padding: 12px 12px;
+        .borderRadius(2px);
+        cursor: pointer;
+        user-select: none;
+        color: #fff;
+        .primaryFont(bold);
+    }
+    .drop-menu {
+        position: absolute;
+        top: 45px;
+        left: 0;
+        min-width: 100%;
+        background-color: #fff;
+        .borderRadius(2px);
+        border: 1px solid #eeee;
+        box-sizing: border-box;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+
+        ul {
+            padding: 5px 0;
+
+            li {
+                background-color: #fff;
+                position: relative;
+
+                &:last-child {
+                    a {
+                        border-bottom: none; 
+                    }
+                }
+                .dop-menu {
+                    position: absolute;
+                    left: 115px;
+                    top: 0px;
+                    min-width: 100%;
+                    background-color: #fff;
+                    .borderRadius(2px);
+                    border: 1px solid #eeee;
+                    box-sizing: border-box;
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.5s;
+                }
+                .active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                a {
+                    display: block;
+                    padding: 5px 20px;
+                    border-bottom: 1px solid #eee;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #eee;
+                    }
+
+                }
+            }
+        }
+    }
+}

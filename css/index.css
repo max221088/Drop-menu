@@ -1,0 +1,104 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+p,
+div {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: normal;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+body {
+  padding: 50px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown img {
+  width: 14px;
+  height: 14px;
+}
+.dropdown.active .drop-btn img {
+  transform: rotate(180deg);
+}
+.dropdown.active .drop-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown .drop-btn {
+  display: inline-block;
+  background-color: #2980b9;
+  padding: 12px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  color: #fff;
+  font-family: "Tahoma";
+  font-weight: bold;
+}
+.dropdown .drop-menu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  min-width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #eeee;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.dropdown .drop-menu ul {
+  padding: 5px 0;
+}
+.dropdown .drop-menu ul li {
+  background-color: #fff;
+  position: relative;
+}
+.dropdown .drop-menu ul li:last-child a {
+  border-bottom: none;
+}
+.dropdown .drop-menu ul li .dop-menu {
+  position: absolute;
+  left: 115px;
+  top: 0px;
+  min-width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #eeee;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.dropdown .drop-menu ul li .active {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown .drop-menu ul li a {
+  display: block;
+  padding: 5px 20px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+.dropdown .drop-menu ul li a:hover {
+  background-color: #eee;
+}

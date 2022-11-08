@@ -8,11 +8,10 @@ document.querySelectorAll('.drop-btn').forEach(function (el) {
 document.querySelectorAll('a').forEach(function(li){
     li.addEventListener('click', function() {
      ab = document.querySelectorAll('.dop-menu.active');
-     if (ab.length == 0) {
-        this.nextElementSibling.classList.toggle('active')
-     } else {
+     if (! ab.length == 0) {
         document.querySelector('.dop-menu.active').classList.remove('active')
-        this.nextElementSibling.classList.toggle('active');
      };
+     if (this.nextElementSibling) {
+        this.nextElementSibling.classList.toggle('active') };
     });
 });
